@@ -87,16 +87,15 @@ IF(!(Test-Path $registryPath))
 # "GroupnameOrSid" 
 # Name or SID for the group used for elevation. Default value is the wellknown SID for BUILTIN\Administrators 
 # S-1-5-32-547 is the wellknown SID for BUILTIN\PowerUsers
-
-#$Name = "GroupnameOrSid"
-#$value = "S-1-532-544"
-#IF(!(Test-Path $registryPath))
-#  {
-#    New-Item -Path $registryPath -Force | Out-Null
-#    New-ItemProperty -Path $registryPath -Name $name -Value $value `
-#    -PropertyType String -Force | Out-Null}
-# ELSE {
-#    New-ItemProperty -Path $registryPath -Name $name -Value $value `
-#    -PropertyType String -Force | Out-Null}   
+$Name = "GroupnameOrSid"
+$value = "S-1-5-32-544"
+IF(!(Test-Path $registryPath))
+  {
+    New-Item -Path $registryPath -Force | Out-Null
+    New-ItemProperty -Path $registryPath -Name $name -Value $value `
+    -PropertyType String -Force | Out-Null}
+ ELSE {
+    New-ItemProperty -Path $registryPath -Name $name -Value $value `
+    -PropertyType String -Force | Out-Null}   
 
     
