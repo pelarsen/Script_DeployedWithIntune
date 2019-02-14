@@ -1,8 +1,7 @@
 ﻿##################################################################################################
 <#
 .SYNOPSIS
-Policy Definition template file for Intune to run with the Microsoft Intune custome profile
-This policy setup OneDrive For Business with AutoConfigure and KFM 
+Script that set a regkey to restrict the use of Internet Explorer
 
 
 .NOTES
